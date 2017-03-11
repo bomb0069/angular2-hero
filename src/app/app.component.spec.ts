@@ -36,4 +36,5 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h2').textContent).toContain('Windstorm details!');
   }));
+
 });
