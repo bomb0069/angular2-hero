@@ -37,4 +37,14 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h2').textContent).toContain('Windstorm details!');
   }));
 
+  it('click at "Click Me" will change hero name', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    compiled.querySelector('button').click();
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('h2').textContent).toContain('Bomb details!');
+  }));
+
 });
